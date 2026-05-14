@@ -2,9 +2,9 @@ title: Thinking Out Louder
 description: "Guanjie's notes on minds, machines, and the users between them"
 
 url: "https://LiYou0719.github.io"
-baseurl: "/blog"
+baseurl: "/Thinking-out-louder"
 
-repository: LiYou0719/blog
+repository: LiYou0719/Thinking-out-louder
 
 theme: jekyll-theme-cayman
 

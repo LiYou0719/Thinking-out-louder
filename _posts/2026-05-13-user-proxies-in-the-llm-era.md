@@ -8,7 +8,7 @@ date: 2026-05-13
 
 The criticism of AI personas is already well-sourced. It spans controlled experiments, large-scale empirical reviews, HCI scholarship, and practitioner analysis, and it covers multiple failure modes from multiple angles (see Table 1).
 
-Despite the substantial criticism, this space is still active because of genuine, unmet research needs. In a [previous blog post](https://liyou0719.github.io/blog/2026/05/06/reading-the-landscape.html), I named prospective research as one example of such needs: users cannot meaningfully answer questions about experiences that have no current referent.
+Despite the substantial criticism, this space is still active because of genuine, unmet research needs. In a [previous blog post](https://liyou0719.github.io/Thinking-out-louder/2026/05/06/reading-the-landscape.html), I named prospective research as one example of such needs: users cannot meaningfully answer questions about experiences that have no current referent.
 
 This post is not to relitigate the case against AI personas, which is well-made and I largely agree with it. The most comprehensive empirical synthesis to date (a [systematic review](https://storage.ghost.io/c/13/75/1375db81-cd4e-4555-bb92-4438a626256b/content/files/2026/03/synthetic_participants_generated_by_large_language_models_a_systematic_literature_review.pdf) of 182 papers) flags that the prospect of augmentative approaches incorporating real human data are "significant for solving several key issues." This post is an attempt to take that direction seriously, asking whether there is a rigorous way to build LLM-based user proxies that genuinely serve research rather than replacing it.
 
