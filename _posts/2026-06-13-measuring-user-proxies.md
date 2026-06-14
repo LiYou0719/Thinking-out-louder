@@ -53,7 +53,7 @@ Switching harness changes how reliably the grader follows its instructions. In t
 
 *Figure 1: Harness 2 rescue rates among Harness 1 failures.*
 
-Across every panel in Figure 1, rescue rate rises with the pass rate of other responses from the same interview, regardless of ground truth or confidence level. One might argue this simply reflects that failures in high pass rate interviews are softer to begin with. But the rescue rate rises significantly among failures Harness 1 was most certain about, in both ground truth conditions (transcript: p=0.018; prior-reading: p<0.001). That the effect is strongest precisely where failures are least ambiguous points to contamination rather than softness.
+Across every bar cluster in Figure 1, rescue rate rises with the pass rate of other responses from the same interview, regardless of ground truth or confidence level. One might argue this simply reflects that failures in high pass rate interviews are softer to begin with. But the rescue rate rises significantly among failures Harness 1 was most certain about, in both ground truth conditions (transcript: p=0.018; prior-reading: p<0.001). That the effect is strongest precisely where failures are least ambiguous points to contamination rather than softness.
 
 This impact is invisible in practice. A proxy builder reaching for batching to reduce token costs may not suspect it affects grader judgment, and have no way to detect it without comparing multiple harnesses on the same responses.
 
