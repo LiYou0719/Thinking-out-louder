@@ -47,18 +47,13 @@ The two reference points are therefore complementary rather than redundant. A lo
 
 ## The hidden impact of harness choice
 
-Switching harness changes how reliably the grader follows its instructions. In this experiment, at least two mechanisms are at play. First, grading instructions sit in the prompt differently: instructions passed via API are processed as system prompt; in the LLM-orchestrated workflow, technical constraints meant instructions were processed as part of user messaging instead. Second, batching in Harness 2 introduces relational contamination: when a grader evaluates a set of proxy responses from the same interview together rather than one at a time, the quality of surrounding responses bleeds into the judgment of any individual one. Table 2 shows rescue rates: cases where Harness 1 scored a response as a failure but Harness 2 reversed it. The table breaks this down by two variables: the pass rate of other responses from the same interview, and how confident Harness 1 was in its original failure judgment.
+Switching harness changes how reliably the grader follows its instructions. In this experiment, at least two mechanisms are at play. First, grading instructions sit in the prompt differently: instructions passed via API are processed as system prompt; in the LLM-orchestrated workflow, technical constraints meant instructions were processed as part of user messaging instead. Second, batching in Harness 2 introduces relational contamination: when a grader evaluates a set of proxy responses from the same interview together rather than one at a time, the quality of surrounding responses bleeds into the judgment of any individual one. Figure 1 shows rescue rates: cases where Harness 1 scored a response as a failure but Harness 2 reversed it. The figure breaks this down by two variables: the pass rate of other responses from the same interview, and how confident Harness 1 was in its original failure judgment.
 
-|  | n | Low pass rate interview | High pass rate interview |
-|--|--|--|--|
-| **Transcript-grounded, high confidence** | 124 | ~0.23 | ~0.62 |
-| **Transcript-grounded, medium confidence** | 87 | ~0.41 | ~0.65 |
-| **Prior-reading-grounded, high confidence** | 163 | ~0.10 | ~0.49 |
-| **Prior-reading-grounded, medium confidence** | 137 | ~0.52 | ~0.68 |
+![Harness 2 rescue rates among Harness 1 failures.]({{ '/assets/images/table2_rescue_rates.png' | relative_url }})
 
-*Table 2: Harness 2 rescue rates among Harness 1 failures. Confidence = Harness 1's own confidence in the failure judgment; in practice, only high and medium confidence judgments were produced.*
+*Figure 1: Harness 2 rescue rates among Harness 1 failures.*
 
-Across every row in Table 2, rescue rate rises with the pass rate of other responses from the same interview, regardless of ground truth or confidence level. One might argue this simply reflects that failures in high pass rate interviews are softer to begin with. But if that were the case, high-confidence failures should be reversed less often than medium-confidence ones. Table 2 shows the opposite: the gradient is steeper among cases Harness 1 was most certain about, pointing to contamination rather than softness. 
+Across every panel in Figure 1, rescue rate rises with the pass rate of other responses from the same interview, regardless of ground truth or confidence level. One might argue this simply reflects that failures in high pass rate interviews are softer to begin with. But the rescue rate rises significantly among failures Harness 1 was most certain about, in both ground truth conditions (transcript: p=0.018; prior-reading: p<0.001). That the effect is strongest precisely where failures are least ambiguous points to contamination rather than softness.
 
 This impact is invisible in practice. A proxy builder reaching for batching to reduce token costs may not suspect it affects grader judgment, and have no way to detect it without comparing multiple harnesses on the same responses.
 
