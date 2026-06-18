@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lost in Translation: What LLM Can and Cannot Find for You in User Interview Transcripts"
+title: "Lost in Translation: What LLM Can and Cannot Find for Product Teams in User Interview Transcripts"
 date: 2026-06-18
 ---
 
@@ -228,7 +228,7 @@ Questions not in the upper right fall short for distinct reasons. A red or purpl
 
 *Normative questions* (Q15 tasks humans should do regardless of AI capability, Q18 broader societal concerns) sit on the paler side. They ask what participants believe ought to be the case, and whether a given statement rises to the level of a considered position depends on reading tone and intent. A product team asking these questions may be trying to set guardrails and identify directions to deprioritize, a judgment that requires product context the proxy doesn't have access to.
 
-Q01 (AI tools used) deserves a separate note because it looks different from the others: the dot is red but not pale. While the proxy can capture what the human prior reading sees as AI tools, to my surprise the criterion is unstable with what counts as specific enough: Does someone mentioning "an AI assistant" counts as specifying their tool? How about "AI features in Adobe"? Rewording or sharpening the rubric would help, but only up to a point. Any definition of "specific enough" will lag behind what users are actually doing, since the tool landscape changes faster than any rubric can track.
+Q01 (AI tools used) deserves a separate note because it looks different from the others: the dot is red but not pale. The proxy reads the content and captures what the human prior reading recognizes as AI tools, but there is instability in the criterion itself: Does someone mentioning "an AI assistant" counts as specifying their tool? How about "AI features in Adobe"? Rewording or sharpening the rubric would help, but only up to a point. Any definition of "specific enough" will lag behind what users are actually doing, since the tool landscape changes faster than any rubric can track.
 
 ---
 
