@@ -2,6 +2,9 @@
 layout: post
 title: "Lost in Translation: What LLM Can and Cannot Find for Product Teams in User Interview Transcripts"
 date: 2026-06-18
+image:
+  path: /assets/images/well_posedness_figure.png
+  alt: "Scatter plot of well-posedness versus human prior-reading pass rate for 23 UXR questions"
 ---
 
 > **TLDR**: Not all UXR questions are equally suited for LLMs. To measure this empirically, I sampled 50 interview transcripts and designed 23 UXR questions to simulate what a product team might want to learn. For each question, I tested how consistently the LLM could classify whether it was answerable based on interview transcripts (well-posedness), then crossed that against how often the proxy's responses matched my own prior readings of the same transcripts. Questions about observable behavior, factual experience, and explicit stance tend to work well; emotional and affective questions, fine-grained process behaviors, and normative positions tend not to, because the product-relevant threshold for what counts as a useful answer is hard to transmit through a rubric. If you are using LLMs to process interview transcripts and finding the outcomes sloppy, there are three levers: select question types that are well-posed for LLMs, refine wording to stabilize the criterion, or provide product context upfront. For those building [LLM-powered user proxies](https://guanjie.li/Thinking-out-louder/2026/05/13/user-proxies-in-the-llm-era.html), the real engineering challenge is not getting the LLM to find information, but helping humans communicate what they are looking for clearly enough that the model can hold it as a target.
