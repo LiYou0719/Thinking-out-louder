@@ -1,10 +1,14 @@
 title: Thinking Out Louder
-description: "Guanjie's notes on minds, machines, and the users between them"
+description: "Guanjie Li's notes on minds, machines, and the users between them"
 
 url: "https://liyou0719.github.io"
 baseurl: "/Thinking-out-louder"
 
 repository: LiYou0719/Thinking-out-louder
+
+owner:
+  name: Guanjie Li
+  linkedin: https://www.linkedin.com/in/guanjie-li-5997b980/
 
 theme: jekyll-theme-cayman
 

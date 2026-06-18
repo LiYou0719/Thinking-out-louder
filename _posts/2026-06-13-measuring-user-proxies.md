@@ -22,9 +22,9 @@ The proxy architecture follows the logic of [Park et al. (2024)](https://arxiv.o
 
 I ran the same proxy responses through four grader configurations: two ground truth sources crossed with two LLM harnesses. The two ground truth sources are the original interview transcript itself, and my own prior readings of the transcripts, completed before any proxy output was available. The two harnesses are built differently: in the first, grading instructions are passed via LLM API with each proxy response evaluated individually; in the second, grading instructions are delivered as user messaging within an LLM-orchestrated workflow, with proxy responses batched together. This setup is faster and more token-efficient, one that practitioners building their own evaluation pipelines might reasonably reach for. Whether that efficiency comes at a measurement cost is one of the things this experiment tested.
 
-*Figure 1: Pass rate by grader configuration*
-
 ![Pass rate by grader configuration.]({{ '/assets/images/table1_pass_rates.png' | relative_url }})
+
+*Figure 1: Pass rate by grader configuration*
 
 Switching ground truth moves the pass rate substantially in both harness conditions (both p < 0.001). Switching harness, however, only matters when grading against human prior-readings (p < 0.001); against the human-free transcript, the two harnesses are statistically indistinguishable (p = 0.93). The two effects are not independently additive; the interaction is significant (p < 0.001). Both main effects and the interaction are built on transcript-level clustering with N=50.
 

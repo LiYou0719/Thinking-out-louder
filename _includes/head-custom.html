@@ -20,4 +20,24 @@
     color: #fff !important;
     text-decoration: none !important;
   }
+  .page-header .project-tagline a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+  }
+  .page-header .project-tagline a:hover {
+    color: #fff;
+    opacity: 1;
+  }
 </style>
+{% if page.layout == 'post' %}
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+{% endif %}
