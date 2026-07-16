@@ -51,29 +51,29 @@ These two instruments catch different failures, and neither alone is sufficient.
 <script>
 (function() {
 const raw = [
-  {qid:'Q01', av:0.0889, ci_lo:0.0611, ci_hi:0.1167, L2:0.84, pct:0.58, q:"What specific AI tools does this participant mention using in their work?"},
-  {qid:'Q24', av:0.0667, ci_lo:0.0456, ci_hi:0.0883, L2:0.32, pct:0.42, q:"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?"},
-  {qid:'Q15', av:0.0489, ci_lo:0.0283, ci_hi:0.0722, L2:0.70, pct:0.78, q:"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?"},
-  {qid:'Q10', av:0.0472, ci_lo:0.0278, ci_hi:0.0683, L2:0.54, pct:0.77, q:"Does this participant describe being frustrated by AI tools, and if so, in what context?"},
-  {qid:'Q23', av:0.035,  ci_lo:0.0183, ci_hi:0.0528, L2:0.78, pct:0.31, q:"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?"},
-  {qid:'Q19', av:0.035,  ci_lo:0.0172, ci_hi:0.0533, L2:0.72, pct:0.54, q:"What AI capabilities does this participant wish existed but don't yet?"},
-  {qid:'Q06', av:0.0322, ci_lo:0.0178, ci_hi:0.0478, L2:0.78, pct:0.67, q:"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?"},
-  {qid:'Q18', av:0.0283, ci_lo:0.0122, ci_hi:0.0472, L2:0.64, pct:0.44, q:"Does this participant raise broader societal, economic, or ethical concerns about generative AI?"},
-  {qid:'Q22', av:0.0233, ci_lo:0.0094, ci_hi:0.0406, L2:0.62, pct:0.84, q:"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?"},
-  {qid:'Q14', av:0.0228, ci_lo:0.0078, ci_hi:0.04,   L2:0.74, pct:0.71, q:"Does this participant express concern about AI displacing their job or profession?"},
-  {qid:'Q08', av:0.0206, ci_lo:0.0072, ci_hi:0.0378, L2:0.68, pct:0.93, q:"What positive emotions or sources of satisfaction does this participant express about working with AI?"},
-  {qid:'Q11', av:0.02,   ci_lo:0.0078, ci_hi:0.0344, L2:0.88, pct:0.68, q:"How does this participant describe their colleagues' or workplace's attitudes toward AI use?"},
-  {qid:'Q12', av:0.0183, ci_lo:0.005,  ci_hi:0.035,  L2:0.80, pct:0.15, q:"Does this participant describe encountering social stigma, judgment, or perceived 'laziness' around using AI at work?"},
-  {qid:'Q09', av:0.0161, ci_lo:0.0039, ci_hi:0.0306, L2:0.30, pct:0.84, q:"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?"},
-  {qid:'Q17', av:0.0156, ci_lo:0.0043, ci_hi:0.03,   L2:0.82, pct:0.87, q:"How does this participant envision their personal use of AI evolving in the next few years?"},
-  {qid:'Q05', av:0.0139, ci_lo:0.0044, ci_hi:0.0261, L2:0.86, pct:0.59, q:"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?"},
-  {qid:'Q16', av:0.0056, ci_lo:0.0,    ci_hi:0.0167, L2:0.96, pct:0.25, q:"Has this participant considered shifting their role toward managing or overseeing AI systems?"},
-  {qid:'Q04', av:0.005,  ci_lo:0.0,    ci_hi:0.015,  L2:0.80, pct:0.99, q:"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?"},
-  {qid:'Q21', av:0.0,    ci_lo:0.0,    ci_hi:0.0,    L2:0.98, pct:1.0,  q:"What is this participant's occupation or job role?"},
-  {qid:'Q03', av:0.0,    ci_lo:0.0,    ci_hi:0.0,    L2:0.81, pct:1.0,  q:"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?"},
-  {qid:'Q20', av:0.0,    ci_lo:0.0,    ci_hi:0.0,    L2:0.84, pct:1.0,  q:"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?"},
-  {qid:'Q02', av:0.0,    ci_lo:0.0,    ci_hi:0.0,    L2:0.76, pct:1.0,  q:"What kinds of work tasks does this participant use AI for?"},
-  {qid:'Q13', av:0.0,    ci_lo:0.0,    ci_hi:0.0,    L2:0.96, pct:0.14, q:"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?"},
+  {qid:'Q01', av:0.0790, ci_lo:0.0548, ci_hi:0.1037, L2:0.84, pct:0.58, q:"What specific AI tools does this participant mention using in their work?"},
+  {qid:'Q24', av:0.0593, ci_lo:0.0405, ci_hi:0.0790, L2:0.32, pct:0.42, q:"What does this participant describe about how they prefer to communicate with AI (e.g., chat vs structured prompts vs voice)?"},
+  {qid:'Q15', av:0.0435, ci_lo:0.0247, ci_hi:0.0642, L2:0.70, pct:0.78, q:"What tasks or responsibilities, if any, does this participant explicitly say should be done by humans rather than AI, regardless of whether AI is capable of doing them?"},
+  {qid:'Q10', av:0.0420, ci_lo:0.0232, ci_hi:0.0627, L2:0.54, pct:0.77, q:"Does this participant describe being frustrated by AI tools, and if so, in what context?"},
+  {qid:'Q19', av:0.0311, ci_lo:0.0153, ci_hi:0.0479, L2:0.72, pct:0.54, q:"What AI capabilities does this participant wish existed but don't yet?"},
+  {qid:'Q23', av:0.0311, ci_lo:0.0163, ci_hi:0.0469, L2:0.78, pct:0.31, q:"After AI generates an output, how does this participant pass it into a non-AI tool, document, or system to continue their workflow?"},
+  {qid:'Q06', av:0.0286, ci_lo:0.0158, ci_hi:0.0425, L2:0.78, pct:0.67, q:"What specific action, if any, does this participant take to check that AI's output is correct or trustworthy before using it?"},
+  {qid:'Q18', av:0.0252, ci_lo:0.0109, ci_hi:0.0425, L2:0.64, pct:0.44, q:"Does this participant raise broader societal, economic, or ethical concerns about generative AI?"},
+  {qid:'Q22', av:0.0207, ci_lo:0.0084, ci_hi:0.0356, L2:0.62, pct:0.84, q:"What does this participant do, if anything, in follow-up prompts to AI to refine the output toward what they need?"},
+  {qid:'Q14', av:0.0202, ci_lo:0.0069, ci_hi:0.0351, L2:0.74, pct:0.71, q:"Does this participant express concern about AI displacing their job or profession?"},
+  {qid:'Q08', av:0.0183, ci_lo:0.0064, ci_hi:0.0326, L2:0.68, pct:0.93, q:"What positive emotions or sources of satisfaction does this participant express about working with AI?"},
+  {qid:'Q11', av:0.0178, ci_lo:0.0069, ci_hi:0.0311, L2:0.88, pct:0.68, q:"How does this participant describe their colleagues' or workplace's attitudes toward AI use?"},
+  {qid:'Q12', av:0.0163, ci_lo:0.0044, ci_hi:0.0306, L2:0.80, pct:0.15, q:"Does this participant describe encountering social stigma, judgment, or perceived 'laziness' around using AI at work?"},
+  {qid:'Q09', av:0.0143, ci_lo:0.0035, ci_hi:0.0277, L2:0.30, pct:0.84, q:"What concerns does this participant raise about how AI performs on their work tasks — its accuracy, reliability, or the quality of its output?"},
+  {qid:'Q17', av:0.0138, ci_lo:0.0040, ci_hi:0.0267, L2:0.82, pct:0.87, q:"How does this participant envision their personal use of AI evolving in the next few years?"},
+  {qid:'Q05', av:0.0123, ci_lo:0.0040, ci_hi:0.0227, L2:0.86, pct:0.59, q:"Has this participant encountered AI making factual errors, hallucinating, or producing incorrect output? If so, in what context?"},
+  {qid:'Q16', av:0.0049, ci_lo:0.0000, ci_hi:0.0148, L2:0.96, pct:0.25, q:"Has this participant considered shifting their role toward managing or overseeing AI systems?"},
+  {qid:'Q04', av:0.0044, ci_lo:0.0000, ci_hi:0.0133, L2:0.80, pct:0.99, q:"Are there tasks this participant prefers to keep doing themselves rather than delegate to AI? If so, which?"},
+  {qid:'Q02', av:0.0000, ci_lo:0.0000, ci_hi:0.0000, L2:0.76, pct:1.00, q:"What kinds of work tasks does this participant use AI for?"},
+  {qid:'Q03', av:0.0000, ci_lo:0.0000, ci_hi:0.0000, L2:0.81, pct:1.00, q:"Does this participant describe using AI to augment their own work, or to automate/delegate tasks entirely?"},
+  {qid:'Q13', av:0.0000, ci_lo:0.0000, ci_hi:0.0000, L2:0.96, pct:0.14, q:"What concerns, if any, does this participant raise about privacy, data security, or sharing confidential information with AI?"},
+  {qid:'Q20', av:0.0000, ci_lo:0.0000, ci_hi:0.0000, L2:0.84, pct:1.00, q:"What is this participant's overall stance toward AI in their work — enthusiastic, cautious, conflicted, resistant, or other?"},
+  {qid:'Q21', av:0.0000, ci_lo:0.0000, ci_hi:0.0000, L2:0.98, pct:1.00, q:"What is this participant's occupation or job role?"},
 ];
 
 const X_MIN = 0.6, X_MAX = 1.0;
@@ -287,4 +287,4 @@ Here, $N = 50$ participants and $r = 9$ times. The denominator 0.25 is the theor
 
 **The raw (uncorrected) variance is used for normalization.** An unbiased variance estimator would multiply by $\frac{r}{r-1}$, but individual values can then exceed 0.25, breaking the $[0, 1]$ bound. Since the formula is used for interpretation rather than variance estimation, the raw mean is the right choice. The two versions differ by less than 12% in practice and do not change the ranking.
 
-**Use Figure 1 for direction, not precision.** Each dot represents a question's mean well-posedness score, and hovering reveals a 90% confidence interval derived from a bootstrap over the 50 interview transcripts. For many questions in the middle of the range, those intervals overlap. Q01 sits clearly at the left (0.64) and a handful of questions sit clearly at the right (1.0), but the questions in between are harder to rank with confidence. Narrowing the confidence intervals would require a larger sample, which is beyond the scope of this post. The figure is a guide to broad groupings, not a precise scorecard.
+**Use Figure 1 for direction, not precision.** Each dot represents a question's mean well-posedness score, and hovering reveals a 90% confidence interval derived from a bootstrap over the 50 interview transcripts. For many questions in the middle of the range, those intervals overlap. Q01 sits clearly at the left (0.68) and a handful of questions sit clearly at the right (1.0), but the questions in between are harder to rank with confidence. Narrowing the confidence intervals would require a larger sample, which is beyond the scope of this post. The figure is a guide to broad groupings, not a precise scorecard.
