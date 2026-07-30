@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dual Reference Points for User Proxy Evaluation: Design and Rationale"
+description: "LLM evaluations can look rigorous while measuring the wrong thing. Two complementary reference points reveal failures that either one alone would miss."
 date: 2026-06-13
 ---
 

@@ -1,0 +1,17 @@
+{% assign nav_post = include.post %}
+{% assign nav_words = nav_post.content | number_of_words %}
+{% assign nav_minutes = nav_words | divided_by: 220 | plus: 1 %}
+{% assign nav_summary_source = nav_post.content | markdownify | strip_html | normalize_whitespace | replace_first: 'TLDR:', '' | replace_first: 'TLDR', '' | strip %}
+{% assign nav_summary_parts = nav_summary_source | split: '. ' %}
+{% assign nav_fallback = nav_summary_parts | first | append: '.' | replace: '?.', '?' | replace: '!.', '!' %}
+{% assign nav_summary = nav_post.description | default: nav_fallback %}
+<a class="article-nav-card article-nav-card--{{ include.position }}" href="{{ nav_post.url | relative_url }}">
+  <span class="article-nav-card__direction">
+    {% if include.position == 'earlier' %}<span aria-hidden="true">←</span>{% endif %}
+    {{ include.label }}
+    {% if include.position == 'later' %}<span aria-hidden="true">→</span>{% endif %}
+  </span>
+  <span class="article-nav-card__title">{{ nav_post.title }}</span>
+  <span class="article-nav-card__meta">{{ nav_post.date | date: "%b %-d, %Y" }} · {{ nav_minutes }} min read</span>
+  <span class="article-nav-card__summary">{{ nav_summary }}</span>
+</a>

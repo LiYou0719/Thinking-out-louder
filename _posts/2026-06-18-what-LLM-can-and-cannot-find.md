@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Lost in Translation: What LLM Can and Cannot Find for Product Teams in User Interview Transcripts"
+description: "The hardest part of using LLMs on interview transcripts is not retrieving information, but specifying what a product-relevant answer should look like."
 date: 2026-06-18
+math: true
 image:
   path: /assets/images/well_posedness_figure.png
   alt: "Scatter plot of well-posedness versus human prior-reading pass rate for 23 UXR questions"
@@ -19,8 +21,7 @@ But before asking whether an answer is correct, it is worth asking how consisten
 
 These two instruments catch different failures, and neither alone is sufficient. The figure below plots all 23 questions on both axes at once.
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<div style="padding: 1.5rem 0 1rem; font-family: 'Open Sans', sans-serif;">
+<div style="padding: 1.5rem 0 1rem; font-family: 'Instrument Sans', Avenir, 'Avenir Next', sans-serif;">
   <div style="display: flex; gap: 32px; margin-bottom: 0.75rem; flex-wrap: wrap; align-items: flex-start;">
     <div>
       <div style="font-size: 11px; color: #666; margin-bottom: 4px;">question well-posedness (x axis)</div>
@@ -44,7 +45,7 @@ These two instruments catch different failures, and neither alone is sufficient.
   <p style="font-size: 11px; color: #666; margin: 0 0 0.75rem;">hover over a point for question text and details · well-posedness = 1 − answerability variance / 0.25</p>
   <div id="wp-chart-wrapper" style="position: relative; width: 100%; height: 500px;">
     <canvas id="wp-scatter" role="img" aria-label="Scatter plot of 23 UXR questions by well-posedness (x, 0.6 to 1.0) and human prior-reading pass rate (y, 0 to 1)."></canvas>
-    <div id="wp-tooltip" style="display:none; position:absolute; pointer-events:none; font-family:'Open Sans',sans-serif; font-size:11px; line-height:1.6; max-width:290px; padding:10px 12px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.12); background:#fff; border:1px solid rgba(0,0,0,0.12);"></div>
+    <div id="wp-tooltip" style="display:none; position:absolute; pointer-events:none; font-family:'Instrument Sans',Avenir,'Avenir Next',sans-serif; font-size:11px; line-height:1.6; max-width:290px; padding:10px 12px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.12); background:#fff; border:1px solid rgba(0,0,0,0.12);"></div>
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
@@ -77,7 +78,7 @@ const raw = [
 ];
 
 const X_MIN = 0.6, X_MAX = 1.0;
-const FONT = "'Open Sans', sans-serif";
+const FONT = "'Instrument Sans', Avenir, 'Avenir Next', sans-serif";
 
 const points = raw.map(d => ({
   ...d,
