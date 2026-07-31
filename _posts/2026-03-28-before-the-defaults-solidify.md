@@ -1,5 +1,6 @@
 ---
 title: "Before the Defaults Solidify: Mapping the Future of UX Research"
+description: "AI will not make UX research irrelevant. It may dissolve the boundaries around who does it, where it happens, and what counts as evidence."
 date: 2026-03-28
 ---
 

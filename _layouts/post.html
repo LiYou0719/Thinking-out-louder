@@ -1,8 +1,68 @@
 ---
 layout: default
 ---
-{{ content }}
+{% assign word_count = content | number_of_words %}
+{% assign reading_minutes = word_count | divided_by: 220 | plus: 1 %}
 
-<div class="post-back-wrap post-back-wrap--bottom">
-  <a href="{{ '/' | absolute_url }}" class="post-back-btn">← Home</a>
+<div class="reading-progress" data-reading-progress hidden aria-hidden="true">
+  <span class="reading-progress__bar" data-reading-progress-bar></span>
 </div>
+
+<article class="article">
+  <header class="article-header">
+    <a class="article-kicker" href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> All writing</a>
+    <h1 class="article-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="article-dek">{{ page.description }}</p>
+    {% endif %}
+    <div class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{{ reading_minutes }} min read</span>
+    </div>
+  </header>
+
+  <div class="article-body">
+    <details class="mobile-toc" data-mobile-toc hidden>
+      <summary>
+        <span class="mobile-toc__label">On this page</span>
+        <span class="mobile-toc__current" data-current-section>Overview</span>
+      </summary>
+      <nav class="mobile-toc__nav" aria-label="On this page">
+        <ol class="toc-list" data-toc-list="mobile"></ol>
+      </nav>
+    </details>
+
+    <div class="article-grid">
+      <div class="article-main">
+        <div class="article-content" id="article-overview">
+          {{ content }}
+        </div>
+
+        <nav class="article-end" aria-labelledby="continue-reading-title">
+          <div class="article-end__header">
+            <h2 id="continue-reading-title">Continue reading</h2>
+            <a class="article-end__all" href="{{ '/' | relative_url }}">All writing</a>
+          </div>
+          <div class="article-nav-grid">
+            {% if page.previous %}
+              {% include article-nav-card.html post=page.previous position="earlier" label="Published earlier" %}
+            {% endif %}
+            {% if page.next %}
+              {% include article-nav-card.html post=page.next position="later" label="Published later" %}
+            {% endif %}
+          </div>
+        </nav>
+      </div>
+
+      <aside class="article-toc" data-desktop-toc hidden>
+        <p class="article-toc__label">On this page</p>
+        <nav aria-label="On this page">
+          <ol class="toc-list" data-toc-list="desktop"></ol>
+        </nav>
+      </aside>
+    </div>
+  </div>
+</article>
+
+<script src="{{ '/assets/js/reading-navigation.js' | relative_url }}" defer></script>
